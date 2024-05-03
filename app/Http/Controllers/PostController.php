@@ -9,7 +9,8 @@ class PostController extends Controller
 {
     public function index(){
         return view('posts', [
-            "title"=> "Posts",
+            "title"=> "All Posts",
+            'active'=> 'posts',
             // "posts" => post::all()
             "posts" => post::latest()->get()
         ]);
